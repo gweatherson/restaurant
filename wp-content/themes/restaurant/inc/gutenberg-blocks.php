@@ -6,12 +6,24 @@ function register_acf_block_types() {
     acf_register_block_type(array(
         'name'              => 'hero',
         'title'             => __('Hero'),
-        'description'       => __('Hero block.'),
+        'description'       => __('Hero block'),
         'render_template'   => 'template-parts/blocks/hero.php',
         'category'          => 'formatting',
         'icon'              => 'admin-comments',
-        'keywords'          => array( 'hero', 'quote' ),
+        'keywords'          => array( 'hero' ),
     ));
+
+    // register the menu block.
+    acf_register_block_type(array(
+        'name'              => 'menu',
+        'title'             => __('Menu'),
+        'description'       => __('Menu block'),
+        'render_template'   => 'template-parts/blocks/menu.php',
+        'category'          => 'formatting',
+        'icon'              => 'admin-comments',
+        'keywords'          => array( 'menu' ),
+    ));
+
 }
 
 // Check if function exists and hook into setup.

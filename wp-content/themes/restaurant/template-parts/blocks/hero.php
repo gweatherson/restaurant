@@ -24,7 +24,7 @@ if( !empty($block['align']) ) {
     $className .= ' align' . $block['align'];
 }
 
-// Load values and assing defaults.
+// Load values and assign defaults.
 $title = get_field('hero_title') ?: 'Your title here';
 $image_desktop = get_field('hero_image_desktop') ?: 'okok';
 ?>
