@@ -1,0 +1,19 @@
+/*!
+Theme Name: restaurant
+Theme URI: http://underscores.me/
+Author: Glenn Weatherson
+Author URI: https://glennweatherson.com
+*/
+
+@import "variables/variables";
+@import "normalize";
+@import "typography/typography";
+@import "site";
+@import "elements/elements";
+@import "navigation/navigation";
+@import "modules/accessibility";
+
+body {
+  background: $color__background-body;
+	color: $color__text-screen;
+}
