@@ -1,5 +1,6 @@
 p {
-	margin-bottom: 1.5em;
+	margin-bottom: 1.5rem;
+  font-size: 1.6rem;
 }
 
 dfn, cite, em, i {
@@ -7,11 +8,13 @@ dfn, cite, em, i {
 }
 
 blockquote {
-	margin: 0 1.5em;
+	margin: 0 1.5rem;
 }
 
 address {
-	margin: 0 0 1.5em;
+	margin: 0 0 1.5rem;
+  font-style: normal;
+  line-height: 2.5;
 }
 
 abbr, acronym {
@@ -22,8 +25,4 @@ abbr, acronym {
 mark, ins {
 	background: $color__background-ins;
 	text-decoration: none;
-}
-
-big {
-	font-size: 125%;
 }

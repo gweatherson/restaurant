@@ -25,5 +25,19 @@
 			'after'  => '</div>',
 		) );
 		?>
+
+
+    <div class="contact__content">
+      <h1>Reno</h1>
+
+      <address>
+        <p>1111 Street Street Reno, Nevada<br />
+        <a href="mailto:contact@restaurant.com">contact@restaurant.com</a><br />
+        <a href="tel:+17751111111">(775) 111-1111</a></p>
+      </address>
+    </div>
+
+
 	</div><!-- .entry-content -->
+  <div id="mapid"></div>
 </article><!-- #post-<?php the_ID(); ?> -->

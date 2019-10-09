@@ -355,8 +355,14 @@ h1, h2, h3, h4, h5, h6 {
   clear: both;
 }
 
+h1 {
+  font-size: 10rem;
+  margin: 0 0 1rem 0;
+}
+
 p {
-  margin-bottom: 1.5em;
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
 }
 
 dfn, cite, em, i {
@@ -364,11 +370,13 @@ dfn, cite, em, i {
 }
 
 blockquote {
-  margin: 0 1.5em;
+  margin: 0 1.5rem;
 }
 
 address {
-  margin: 0 0 1.5em;
+  margin: 0 0 1.5rem;
+  font-style: normal;
+  line-height: 2.5;
 }
 
 abbr, acronym {
@@ -379,10 +387,6 @@ abbr, acronym {
 mark, ins {
   background: #fff9c0;
   text-decoration: none;
-}
-
-big {
-  font-size: 125%;
 }
 
 .site {
@@ -406,6 +410,7 @@ big {
 
 html {
   box-sizing: border-box;
+  font-size: 10px;
 }
 
 *,
@@ -418,6 +423,7 @@ html {
 body {
   background: #faf2fd;
   /* Fallback for when there is no custom background color defined. */
+  font-size: 1.6rem;
 }
 
 hr {
@@ -425,6 +431,18 @@ hr {
   border: 0;
   height: 1px;
   margin-bottom: 1.5em;
+}
+
+img {
+  height: auto;
+  /* Make sure images are scaled correctly. */
+  max-width: 100%;
+  /* Adhere to container width. */
+}
+
+figure {
+  margin: 1em 0;
+  /* Extra wide images within figure tags don't overflow the content area. */
 }
 
 ul, ol {
@@ -453,16 +471,23 @@ dd {
   margin: 0 1.5em 1.5em;
 }
 
-img {
-  height: auto;
-  /* Make sure images are scaled correctly. */
-  max-width: 100%;
-  /* Adhere to container width. */
+#mapid {
+  position: absolute;
+  width: calc(100vw - 20rem);
+  height: 100vh;
+  top: 0;
+  right: 0;
+  z-index: 10;
 }
 
-figure {
-  margin: 1em 0;
-  /* Extra wide images within figure tags don't overflow the content area. */
+.contact__content {
+  position: absolute;
+  width: calc(100vw - 20rem);
+  height: 100vh;
+  top: 0;
+  right: 0;
+  z-index: 15;
+  padding-top: 9%;
 }
 
 /*--------------------------------------------------------------
@@ -496,6 +521,7 @@ a:hover, a:active {
 @media screen and (min-width: 37.5em) {
   .menu-main-container {
     height: auto;
+    overflow: visible;
   }
 }
 
@@ -504,10 +530,13 @@ a:hover, a:active {
   flex-direction: column;
   align-items: center;
   width: 100vw;
+  position: relative;
+  z-index: 20;
 }
 @media screen and (min-width: 37.5em) {
   .site-header {
     height: auto;
+    width: auto;
   }
 }
 
@@ -547,7 +576,7 @@ a:hover, a:active {
     justify-content: space-around;
     position: absolute;
     left: -6rem;
-    width: calc(100vh - 10rem);
+    width: calc(100vh - 11rem);
     height: 12rem;
     transform-origin: left top;
     transform: rotate(-90deg) translateX(-100%);

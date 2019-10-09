@@ -1,0 +1,11 @@
+.contact {
+  &__content {
+    position: absolute;
+    width: calc(100vw - 20rem);
+    height: 100vh;
+    top: 0;
+    right: 0;
+    z-index: 15;
+    padding-top: 9%;
+  }
+}

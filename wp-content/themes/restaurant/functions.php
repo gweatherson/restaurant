@@ -120,10 +120,12 @@ add_action( 'widgets_init', 'restaurant_widgets_init' );
  * Enqueue scripts and styles.
  */
 function restaurant_scripts() {
+  // wp_enqueue_style( 'leaflet', 'https://unpkg.com/leaflet@1.5.1/dist/leaflet.css' );
 	wp_enqueue_style( 'restaurant-style', get_stylesheet_uri() );
 
+  // wp_enqueue_script( 'leaflet', 'https://unpkg.com/leaflet@1.5.1/dist/leaflet.js', array(), '', true );
+  // wp_enqueue_script( 'leaflet-map', get_template_directory_uri() . '/js/leaflet-map.js', array(), '', true );
 	wp_enqueue_script( 'restaurant-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
 	wp_enqueue_script( 'restaurant-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
