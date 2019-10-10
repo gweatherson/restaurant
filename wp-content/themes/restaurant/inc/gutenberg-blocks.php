@@ -24,6 +24,17 @@ function register_acf_block_types() {
         'keywords'          => array( 'menu' ),
     ));
 
+    // register the contact block.
+    acf_register_block_type(array(
+        'name'              => 'contact',
+        'title'             => __('Contact'),
+        'description'       => __('Contact block'),
+        'render_template'   => 'template-parts/blocks/contact.php',
+        'category'          => 'formatting',
+        'icon'              => 'admin-comments',
+        'keywords'          => array( 'contact' ),
+    ));
+
 }
 
 // Check if function exists and hook into setup.

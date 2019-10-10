@@ -1,8 +1,9 @@
 #mapid {
   position: absolute;
   width: calc(100vw - 20rem);
-  height: 100vh;
-  top: 0;
+  height: calc(100vh - 26rem);
+  bottom: 0;
   right: 0;
   z-index: 10;
+  background-color: #ccc;
 }
