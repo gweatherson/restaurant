@@ -1,0 +1,20 @@
+plan of attack
+
+- hook up acf fields:
+--reference php to create in back end
+--populate fields with content
+
+--- contact
+--- home hero and title
+--- menu
+--- reserve a table
+
+then move onto layout, don't worry about anything layout related yet, just var_dump/echo.
+
+this will be a big milestone
+
+
+
+
+
+layout plan of attack:

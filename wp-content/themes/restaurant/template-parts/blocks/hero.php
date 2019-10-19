@@ -10,14 +10,10 @@
  */
 
 // Set variables from ACF.
-$title = get_field('hero_title') ?: 'Please enter a hero title.';
-$image_desktop = get_field('hero_image_desktop') ?: 'Please upload a hero desktop image.';
-$image_mobile = get_field('hero_image_mobile') ?: 'Please upload a hero mobile image.';
+$title = get_field('hero_title') ?: 'Please enter a title.';
+$image = get_field('hero_image') ?: 'Please upload a mobile image.';
+$video = get_field('hero_video') ?: 'Please upload a video.';
 ?>
-
-
-
-
 
 <section class="hero">
 
@@ -25,15 +21,9 @@ $image_mobile = get_field('hero_image_mobile') ?: 'Please upload a hero mobile i
     <h1><?php echo $title; ?></h1>
   </header>
 
-
-
-
-
-
-<img class="hero__image" src="<?php echo $image_mobile; ?>"
-     srcset="large.jpg 1024w, <?php echo $image_desktop; ?> 640w, <?php echo $image_mobile; ?> 320w"
-     sizes="(min-width: 36em) 33.3vw, 100vw"
-     alt="Hero image of <?php echo $title; ?>">
-
+  <video muted autoplay loop playsinline>
+    <source src="<?php echo $video; ?>" type="video/mp4">
+    <img src="<?php echo $image; ?>" title="Your browser does not support the <video> tag">
+  </video>
 
 </section>

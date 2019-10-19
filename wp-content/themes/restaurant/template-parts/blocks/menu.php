@@ -25,23 +25,21 @@ if( !empty($block['align']) ) {
 }
 
 // Load values and assign defaults.
-$item = get_field('menu_item') ?: 'Menu Item Blank.';
+$item = get_field('item') ?: 'Menu Item Blank.';
 ?>
 
 
-<?php if( have_rows('menu_item') ): ?>
-  <?php while( have_rows('menu_item') ): the_row();
+<?php if( have_rows('item') ): ?>
+  <?php while( have_rows('item') ): the_row();
 
-    // vars
-    $name = get_sub_field('item_name');
-    $price = get_sub_field('item_price');
-    $description = get_sub_field('item_description');
-    $photo = get_sub_field('item_photo');
+    $title = get_sub_field('title');
+    $price = get_sub_field('price');
+    $description = get_sub_field('description');
+    $image = get_sub_field('image');
     ?>
 
-
-      <?php if( $name ): ?>
-        <?php echo $name; ?>
+      <?php if( $title ): ?>
+        <?php echo $title; ?>
       <?php endif; ?>
 
       <?php if( $price ): ?>
@@ -52,8 +50,8 @@ $item = get_field('menu_item') ?: 'Menu Item Blank.';
         <?php echo $description; ?>
       <?php endif; ?>
 
-      <?php if( $photo ): ?>
-        <?php echo $photo; ?>
+      <?php if( $image ): ?>
+        <?php echo $image; ?>
       <?php endif; ?>
       <hr />
 

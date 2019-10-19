@@ -482,9 +482,14 @@ dd {
   z-index: 10;
   margin-top: 10%;
 }
+.hero video {
+  width: 100%;
+  height: auto;
+}
 .hero header {
   position: absolute;
   z-index: 20;
+  top: -7.5rem;
 }
 .hero__image {
   width: 100%;
@@ -591,21 +596,31 @@ a:hover, a:active {
   height: 100%;
 }
 .main-navigation .menu {
-  display: flex;
   margin: 0;
   padding: 0;
   text-transform: uppercase;
 }
 @media screen and (min-width: 37.5em) {
   .main-navigation .menu {
-    justify-content: space-around;
     position: absolute;
-    left: -6rem;
-    width: calc(100vh - 11rem);
-    height: 12rem;
+    width: calc(100vh - 8rem);
+    height: 19.5rem;
     transform-origin: left top;
     transform: rotate(-90deg) translateX(-100%);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    top: 8rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
+}
+.main-navigation .menu ul {
+  display: flex;
+  width: 100%;
+  margin: 0;
 }
 .main-navigation .menu li {
   display: block;
